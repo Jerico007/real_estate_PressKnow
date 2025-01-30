@@ -94,7 +94,16 @@ body {
   visibility: visible;
 }
 
-.hamburger{
+.hamburger {
   color: #25a9e0;
   transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+
+
+  #nav-logo {
+    width: 153px;
+    height: 80px;
+  }
 }
