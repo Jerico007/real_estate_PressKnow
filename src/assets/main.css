@@ -1,35 +1,100 @@
-@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+  background-repeat: no-repeat;
 }
 
-a,
-.green {
+body {
+  overflow: hidden;
+}
+
+
+
+
+#nav-logo {
+  object-fit: cover;
+  width: 200px;
+  height: 100px;
+
+}
+
+.menu-list {
+  list-style-type: none;
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.menu-list-phone {
+  width: 100%;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid #e6e4e4;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.menu-list:hover,
+.menu-list-phone:hover {
+  color: green;
+  text-shadow: 0px 0px 3px #20d4d4d6;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+
+.nav-icons:hover {
+  color: green;
+  text-shadow: 0px 0px 3px #20d4d4d6;
+}
+
+.social-icon-holder {
+  gap: 20px;
+}
+
+.navbar {
+  box-shadow: 0px 11px 20px 1px #00000075 !important;
+  background-color: #eee8e8;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: block;
+}
+
+.list-content {
+  list-style: none;
+  position: absolute;
+  top: 116px;
+  right: 9px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  width: 13em;
+  opacity: 1;
+  transform: translateX(146px);
+  transition: all 0.4s ease-in-out;
+  visibility: hidden;
+}
+
+.show-menu {
+  opacity: 1;
+  transform: translateX(0);
+  right: -9px;
+  /* Move into view */
+  visibility: visible;
+}
+
+.hamburger{
+  color: #25a9e0;
+  transition: all 0.3s ease-in-out;
 }
