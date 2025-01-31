@@ -8,14 +8,25 @@
   font-weight: 300;
   font-style: normal;
   background-repeat: no-repeat;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --green: green;
+  --textShadow: #20d4d4d6;
+  --navColour: #eee8e8;
+  --black: black;
+  --homecolor: #ffcd4f;
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  height: 1000vh;
 }
 
 
 
+/* Navbar start */
 
 #nav-logo {
   object-fit: cover;
@@ -24,33 +35,43 @@ body {
 
 }
 
-.menu-list {
-  list-style-type: none;
+.menu-list>a {
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
+  color: var(--black);
+}
+
+.menu-list {
+  list-style-type: none;
 }
 
 .menu-list-phone {
   width: 100%;
   list-style-type: none;
-  text-decoration: none;
   padding: 4px;
   font-weight: 600;
   cursor: pointer;
   border-bottom: 3px solid #e6e4e4;
 }
 
-.menu-list:hover,
-.menu-list-phone:hover {
-  color: green;
-  text-shadow: 0px 0px 3px #20d4d4d6;
+.menu-list-phone>a {
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--black);
+}
+
+.menu-list>a:hover,
+.menu-list-phone>a:hover {
+  color: var(--green);
+  text-shadow: 0px 0px 3px var(--textShadow);
 }
 
 
 .nav-icons:hover {
-  color: green;
-  text-shadow: 0px 0px 3px #20d4d4d6;
+  color: var(--green);
+  text-shadow: 0px 0px 3px var(--textShadow);
 }
 
 .social-icon-holder {
@@ -59,7 +80,8 @@ body {
 
 .navbar {
   box-shadow: 0px 11px 20px 1px #00000075 !important;
-  background-color: #eee8e8;
+  background-color: var(--navColour);
+  z-index: 100;
 }
 
 .menu-toggle {
@@ -101,9 +123,55 @@ body {
 
 @media screen and (max-width: 768px) {
 
-
   #nav-logo {
     width: 153px;
     height: 80px;
   }
+
+  .head-para{
+    font-size: 2em;
+  }
 }
+
+/* Navbar end */
+
+
+
+/* Home page start */
+.home-image {
+  background-image: url("../components/icons/home.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 44rem;
+  background-attachment: fixed;
+  gap: 2rem;
+}
+
+.title-para {
+  color: var(--homecolor);
+}
+
+.head-para {
+  display: inline;
+  width: 55%;
+  font-size: 4em;
+  color: var(--homecolor);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-100px);
+  filter: blur(55);
+  transition: all 1s ease-in-out ;
+
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0px);
+  filter: blur(0);
+
+}
+
+/* Home page end */
