@@ -32,7 +32,7 @@ function toggleMenu() {
 </script>
 
 <template>
-    <div class="navbar container-fluid d-flex justify-content-between align-items-center p-2 position-fixed top-0">
+    <div class="navbar container-fluid d-flex justify-content-between align-items-center p-2 position-sticky top-0">
         <!-- App logo -->
         <div class="app-logo">
             <img :src="logo" id="nav-logo" alt="No Logo">

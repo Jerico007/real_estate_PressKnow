@@ -1,7 +1,7 @@
 <script setup>
 import HeaderMenu from './components/HeaderMenu.vue';
 import { RouterView } from 'vue-router';
-import { ref, provide, onMounted } from 'vue';
+import { ref, provide } from 'vue';
 
 const state = ref({
   homepage: {
