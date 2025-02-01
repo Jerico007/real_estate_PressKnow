@@ -41,7 +41,7 @@ function toggleMenu() {
         <!-- Menu items -->
         <div class="d-none d-md-flex justify-content-around g-2">
             <li v-for="x in menuState.listContent" class="menu-list mx-2">
-                <RouterLink :to="x.path">{{ x.pathName }}</RouterLink>
+                <RouterLink :to="x.path" active-class="active">{{ x.pathName }}</RouterLink>
             </li>
         </div>
 
@@ -49,7 +49,7 @@ function toggleMenu() {
         <!-- Navigation List (Slide from Right to Left) -->
         <ul :class="['list-content', { 'show-menu': menuState.drawerStatus }]">
             <li v-for="x in menuState.listContent" class="menu-list-phone mx-2">
-                <RouterLink :to="x.path">{{ x.pathName }}</RouterLink>
+                <RouterLink :to="x.path" active-class="active">{{ x.pathName }}</RouterLink>
             </li>
         </ul>
 

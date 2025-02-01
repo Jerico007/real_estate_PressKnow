@@ -25,3 +25,4 @@ const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon); // Register component globally
 app.use(router);
 app.mount('#app')
+

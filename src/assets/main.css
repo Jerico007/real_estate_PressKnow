@@ -16,12 +16,12 @@
   --textShadow: #20d4d4d6;
   --navColour: #eee8e8;
   --black: black;
-  --homecolor: #ffcd4f;
+  --homecolor: #ffffff;
 }
 
 body {
   overflow-x: hidden;
-  height: 1000vh;
+
 }
 
 
@@ -68,6 +68,10 @@ body {
   text-shadow: 0px 0px 3px var(--textShadow);
 }
 
+.active {
+  color: var(--green) !important; 
+  text-shadow: 0px 0px 3px var(--textShadow);
+}
 
 .nav-icons:hover {
   color: var(--green);
@@ -128,7 +132,7 @@ body {
     height: 80px;
   }
 
-  .head-para{
+  .head-para {
     font-size: 2em;
   }
 }
@@ -143,13 +147,14 @@ body {
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 44rem;
+  height: 100vh;
   background-attachment: fixed;
   gap: 2rem;
 }
 
 .title-para {
   color: var(--homecolor);
+  text-shadow: 0px 0px 3px var(--black);
 }
 
 .head-para {
@@ -157,21 +162,90 @@ body {
   width: 55%;
   font-size: 4em;
   color: var(--homecolor);
+  text-shadow: 0px 0px 3px var(--black);
 }
+
+
+.home-middle-content>h2 {
+  font-size: 4em;
+  font-weight: lighter;
+}
+
+.home-middle-content>p {
+  width: 55%;
+}
+
+.spacer {
+
+  width: 50px;
+  height: 1px;
+  background-color: #25a9e0;
+}
+
+.propertyservicebox-holder {
+  gap: 3em;
+}
+
+
+.property-desc>:nth-child(1) {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.property-desc>:nth-child(2) {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+/* Home page end */
+
+/* Animation properties start */
+
+
+.property-desc:nth-child(1) {
+  transition-delay: 100ms;
+}
+
+.property-desc:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.property-desc:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+.property-desc:nth-child(4) {
+  transition-delay: 400ms;
+}
+
+
+
 
 .hidden {
   opacity: 0;
   transform: translateY(-100px);
-  filter: blur(55);
-  transition: all 1s ease-in-out ;
+
+  transition: all 1s ease-in-out;
 
 }
 
 .show {
   opacity: 1;
   transform: translateY(0px);
-  filter: blur(0);
+}
+
+.slide-now {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-in-out;
+}
+
+.slide-right {
+  opacity: 1;
+  transform: translateX(0px);
 
 }
 
-/* Home page end */
+
+
+/* Animation Properties end */

@@ -23,7 +23,9 @@ const routes = [
 
 const router = createRouter({
     history: createMemoryHistory(),
-    routes
+    routes,
+    linkActiveClass: 'active',
+    linkExactActiveClass:'active'
 })
 
 export default router;
