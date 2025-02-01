@@ -19,9 +19,8 @@
   --homecolor: #f8dbbd;
 }
 
-body {
+#app{
   overflow-x: hidden;
-
 }
 
 
@@ -110,6 +109,7 @@ body {
   transform: translateX(146px);
   transition: all 0.4s ease-in-out;
   visibility: hidden;
+  z-index: 1000;
 }
 
 .show-menu {
