@@ -17,9 +17,10 @@
   --navColour: #eee8e8;
   --black: black;
   --homecolor: #f8dbbd;
+  --antiqueWhite: antiquewhite;
 }
 
-#app{
+#app {
   overflow-x: hidden;
 }
 
@@ -68,7 +69,7 @@
 }
 
 .active {
-  color: var(--green) !important; 
+  color: var(--green) !important;
   text-shadow: 0px 0px 3px var(--textShadow);
 }
 
@@ -135,6 +136,12 @@
   .head-para {
     font-size: 2em;
   }
+
+  .property-interior> :nth-child(1) {
+    width: 80vw !important;
+    height: 65vw !important;
+  }
+
 }
 
 /* Navbar end */
@@ -165,16 +172,18 @@
   text-shadow: 0px 0px 3px var(--black);
 }
 
-.home-middle-content{
- background-color: antiquewhite;
+.home-middle-content {
+  background-color: var(--antiqueWhite);
 }
 
-.home-middle-content>h2 {
+.home-middle-content>h2,
+.home-feature-properties>h2 {
   font-size: 4em;
   font-weight: lighter;
 }
 
-.home-middle-content>p {
+.home-middle-content>p,
+.home-feature-properties>p {
   width: 55%;
 }
 
@@ -198,6 +207,46 @@
   font-weight: 300;
   font-size: 2rem;
 }
+
+
+.feature-holder {
+  background-color: var(--antiqueWhite);
+  border-radius: 25px;
+}
+
+
+.property-interior-holder {
+  gap: 11%;
+}
+
+.property-interior {
+  display: flex;
+  flex-direction: column;
+}
+
+.property-interior> :nth-child(1) {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 20px;
+}
+
+.property-interior> :nth-child(2) {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+.property-interior> :nth-child(3) {
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+
+.property-interior> :nth-child(5) {
+  color: var(--green);
+  font-weight: 600;
+}
+
+
 
 /* Home page end */
 
@@ -227,7 +276,7 @@
   opacity: 0;
   transform: translateY(-100px);
 
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
 
 }
 
@@ -236,7 +285,7 @@
   transform: translateY(0px);
 }
 
-.slide-now {
+.slide-right-now {
   opacity: 0;
   transform: translateX(-100px);
   transition: all 1s ease-in-out;
@@ -245,9 +294,30 @@
 .slide-right {
   opacity: 1;
   transform: translateX(0px);
-
 }
 
+
+.slide-left-now {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease-in-out;
+}
+
+.slide-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.img-scale-initial {
+  transform: scale(1.5);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.img-scale-now {
+  transform: scale(1);
+  opacity: 1;
+}
 
 
 /* Animation Properties end */
